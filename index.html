@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAPHA Therapies - Professional Therapy & Wellness Services</title>
+  <meta name="description" content="RAPHA Therapies offers life coaching, occupational therapy, educational advocacy, social work consulting, and social emotional learning services.">
+  <meta property="og:title" content="RAPHA Therapies - Professional Therapy & Wellness Services">
+  <meta property="og:description" content="RAPHA Therapies offers life coaching, occupational therapy, educational advocacy, social work consulting, and social emotional learning services.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.raphatherapies.org">
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Custom styles based on logo */
+    :root {
+      --primary: #333333;
+      --primary-light: #555555;
+      --secondary: #CCCCCC;
+      --accent: #999999;
+      --light-accent: #E5E5E5;
+      --gold: #d4ca95;  /* updated to be more visible gold from logo */
+      --gold-dark: #c2b87c;
+      --gray-dark: #333333;
+      --gray-medium: #666666;
+      --gray-light: #999999;
+      --gray-lightest: #f2f2f2;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.05em;
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-light);
+    }
+    .text-primary {
+      color: var(--primary);
+    }
+    .bg-primary {
+      background-color: var(--primary);
+    }
+    .border-accent {
+      border-color: var(--gold);
+    }
+    .text-accent {
+      color: var(--gold);
+    }
+    .bg-accent {
+      background-color: var(--accent);
+    }
+    .bg-gold {
+      background-color: var(--gold);
+    }
+    .text-gold {
+      color: var(--gold-dark);
+    }
+    .bg-primary-light {
+      background-color: rgba(51, 51, 51, 0.05);
+    }
+    .bg-secondary-light {
+      background-color: rgba(204, 204, 204, 0.2);
+    }
+    .service-card {
+      transition: all 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header/Navigation -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <a href="index.html" class="logo-container">
+            <img src="images/FullLogo.png" alt="RAPHA Therapies Logo" class="h-16">
+            <div class="hidden md:block">
+              <div class="tagline">Nurturing Growth, Inspiring Change</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html" class="text-primary font-medium transition duration-200">Home</a>
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-primary font-medium flex items-center transition duration-200">
+              Services
+              <svg class="h-4 w-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
+              <div class="py-1" role="menu" aria-orientation="vertical">
+                <a href="#life-coaching" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Life Coaching</a>
+                <a href="#occupational-therapy" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Occupational Therapy</a>
+                <a href="#educational-advocacy" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Educational Advocacy</a>
+                <a href="#social-work" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Social Work Consulting</a>
+                <a href="#sel" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Social Emotional Learning</a>
+              </div>
+            </div>
+          </div>
+          <a href="#about" class="text-gray-700 hover:text-primary font-medium transition duration-200">About Us</a>
+          <a href="#team" class="text-gray-700 hover:text-primary font-medium transition duration-200">Our Team</a>
+          <a href="contact.html" class="text-gray-700 hover:text-primary font-medium transition duration-200">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button type="button" class="md:hidden text-gray-700 hover:text-primary focus:outline-none" id="mobile-menu-button">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-primary">Home</a>
+          
+          <!-- Services Dropdown -->
+          <div>
+            <button class="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100 flex justify-between items-center" id="services-dropdown-button">
+              Services
+              <svg class="h-4 w-4 transition-transform" id="services-dropdown-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="pl-4 hidden" id="services-dropdown-menu">
+              <a href="#life-coaching" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Life Coaching</a>
+              <a href="#occupational-therapy" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Occupational Therapy</a>
+              <a href="#educational-advocacy" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Educational Advocacy</a>
+              <a href="#social-work" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Social Work Consulting</a>
+              <a href="#sel" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Social Emotional Learning</a>
+            </div>
+          </div>
+          
+          <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">About Us</a>
+          <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Our Team</a>
+          <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-100">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-gray-900 text-white">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900 opacity-90"></div>
+    <div class="relative bg-cover bg-center h-[600px] flex items-center" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&h=1000')">
+      <div class="container mx-auto px-6 md:px-12">
+        <div class="w-full md:w-2/3 lg:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+            Empowering Growth Through Holistic Support
+          </h1>
+          <p class="text-xl mb-8">
+            Comprehensive therapy and wellness services to nurture your personal, emotional, and educational development.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#services" class="bg-gold hover:bg-gold-dark text-gray-900 font-medium px-6 py-3 rounded-md transition duration-300 text-center">
+              Explore Our Services
+            </a>
+            <a href="contact.html" class="bg-transparent hover:bg-white/10 text-white font-medium px-6 py-3 rounded-md transition duration-300 text-center border border-gold">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+               alt="RAPHA Therapies team members collaborating" 
+               class="rounded-lg shadow-lg w-full h-auto">
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold text-primary mb-6">
+            Welcome to RAPHA Therapies
+          </h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            At RAPHA Therapies, we believe in a comprehensive approach to wellness that addresses the whole person. Our mission is to provide high-quality, personalized services that empower individuals to overcome challenges and achieve their full potential.
+          </p>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            With our diverse team of experienced professionals, we offer a range of specialized services designed to support your journey toward personal growth, emotional wellbeing, and educational success.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-secondary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">Personalized Approach</span>
+            <span class="bg-secondary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">Evidence-Based Practices</span>
+            <span class="bg-secondary/20 text-primary px-4 py-2 rounded-full text-sm font-medium">Inclusive Environment</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          Discover our comprehensive range of therapeutic and supportive services designed to address your unique needs and goals.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Life Coaching Service -->
+        <div id="life-coaching" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gray-100 flex items-center justify-center">
+            <i class="fas fa-compass text-5xl text-gold"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Life Coaching</h3>
+            <p class="text-gray-700 mb-4">Personalized guidance to help you identify goals, overcome obstacles, and create actionable plans for personal and professional development.</p>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Career transitions and development</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Personal growth and goal setting</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Work-life balance strategies</span>
+              </li>
+            </ul>
+            <a href="contact.html" class="inline-block text-gold hover:text-gray-900 font-medium transition duration-300 group">
+              Learn More
+              <i class="fas fa-chevron-right ml-1 group-hover:translate-x-1 transition-transform inline-block"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Occupational Therapy Service -->
+        <div id="occupational-therapy" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gray-100 flex items-center justify-center">
+            <i class="fas fa-hands-helping text-5xl text-gold"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Occupational Therapy</h3>
+            <p class="text-gray-700 mb-4">Therapeutic interventions to develop, recover, or maintain the daily living and work skills of individuals with physical, mental, or developmental conditions.</p>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Sensory processing assessment</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Fine and gross motor skill development</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Adaptive strategies for daily activities</span>
+              </li>
+            </ul>
+            <a href="contact.html" class="inline-block text-gold hover:text-gray-900 font-medium transition duration-300 group">
+              Learn More
+              <i class="fas fa-chevron-right ml-1 group-hover:translate-x-1 transition-transform inline-block"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Educational Advocacy Service -->
+        <div id="educational-advocacy" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gray-100 flex items-center justify-center">
+            <i class="fas fa-book-reader text-5xl text-gold"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Educational Advocacy</h3>
+            <p class="text-gray-700 mb-4">Expert guidance to navigate educational systems and ensure that students receive appropriate accommodations, services, and support for academic success.</p>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">IEP and 504 plan development</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">School meeting representation</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Educational rights consultation</span>
+              </li>
+            </ul>
+            <a href="contact.html" class="inline-block text-gold hover:text-gray-900 font-medium transition duration-300 group">
+              Learn More
+              <i class="fas fa-chevron-right ml-1 group-hover:translate-x-1 transition-transform inline-block"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Work Consulting Service -->
+        <div id="social-work" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gray-100 flex items-center justify-center">
+            <i class="fas fa-users text-5xl text-gold"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Social Work Consulting</h3>
+            <p class="text-gray-700 mb-4">Professional guidance to connect individuals and families with community resources, support services, and crisis intervention strategies.</p>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Resource identification and linkage</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Family support planning</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Crisis management strategies</span>
+              </li>
+            </ul>
+            <a href="contact.html" class="inline-block text-gold hover:text-gray-900 font-medium transition duration-300 group">
+              Learn More
+              <i class="fas fa-chevron-right ml-1 group-hover:translate-x-1 transition-transform inline-block"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social Emotional Learning Service -->
+        <div id="sel" class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+          <div class="h-48 bg-gray-100 flex items-center justify-center">
+            <i class="fas fa-heart text-5xl text-gold"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Social Emotional Learning</h3>
+            <p class="text-gray-700 mb-4">Programs and interventions designed to help individuals develop essential social and emotional skills for healthy relationships and emotional regulation.</p>
+            <ul class="mb-6 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Emotional regulation techniques</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Social skills development</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-gold mt-1 mr-2"></i>
+                <span class="text-gray-700">Conflict resolution strategies</span>
+              </li>
+            </ul>
+            <a href="contact.html" class="inline-block text-gold hover:text-gray-900 font-medium transition duration-300 group">
+              Learn More
+              <i class="fas fa-chevron-right ml-1 group-hover:translate-x-1 transition-transform inline-block"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="lg:w-1/2">
+          <h2 class="text-3xl font-bold text-primary mb-6">About RAPHA Therapies</h2>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            RAPHA Therapies was founded with a vision to provide comprehensive, holistic support services that address the unique needs of each individual. The name "RAPHA" reflects our commitment to healing, restoration, and growth.
+          </p>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            Our interdisciplinary team brings together diverse expertise in life coaching, occupational therapy, education, social work, and emotional development to offer truly integrated care. We believe in treating the whole person, not just isolated symptoms or challenges.
+          </p>
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold text-primary mb-4">Our Core Values</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Core Value 1 -->
+              <div class="flex items-start">
+                <div class="mr-4 text-accent">
+                  <i class="fas fa-user-check text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Client-Centered</h4>
+                  <p class="text-sm text-gray-700">We respect each client's unique journey and tailor our approach accordingly.</p>
+                </div>
+              </div>
+              
+              <!-- Core Value 2 -->
+              <div class="flex items-start">
+                <div class="mr-4 text-accent">
+                  <i class="fas fa-hands text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Compassionate Care</h4>
+                  <p class="text-sm text-gray-700">We approach every interaction with empathy and understanding.</p>
+                </div>
+              </div>
+              
+              <!-- Core Value 3 -->
+              <div class="flex items-start">
+                <div class="mr-4 text-accent">
+                  <i class="fas fa-lightbulb text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Innovative Solutions</h4>
+                  <p class="text-sm text-gray-700">We utilize creative approaches and evidence-based strategies.</p>
+                </div>
+              </div>
+              
+              <!-- Core Value 4 -->
+              <div class="flex items-start">
+                <div class="mr-4 text-accent">
+                  <i class="fas fa-balance-scale text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold mb-1">Professional Integrity</h4>
+                  <p class="text-sm text-gray-700">We uphold the highest ethical standards in all our practices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="lg:w-1/2 space-y-6">
+          <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500" 
+               alt="RAPHA Therapies welcoming office space" 
+               class="rounded-lg shadow-lg w-full h-auto">
+          <div class="bg-secondary bg-opacity-10 p-6 rounded-lg border-l-4 border-accent">
+            <blockquote class="text-gray-700 italic mb-4">
+              "Our mission at RAPHA Therapies is to empower individuals to overcome challenges, discover their strengths, and achieve meaningful growth in all areas of life."
+            </blockquote>
+            <p class="font-medium text-primary">— RAPHA Therapies Founding Team</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-primary mb-4">Our Expert Team</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          Meet our dedicated professionals who are committed to providing exceptional care and support.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Team Member 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+               alt="Sarah Johnson, MA - Life Coach & Wellness Specialist" 
+               class="w-full h-64 object-cover object-center">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary mb-1">Sarah Johnson, MA</h3>
+            <p class="text-accent mb-3">Life Coach & Wellness Specialist</p>
+            <p class="text-gray-700 mb-4">Sarah specializes in helping clients navigate life transitions and develop personalized strategies for growth and fulfillment.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-gray-500 hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin text-lg"></i>
+              </a>
+              <a href="mailto:sarah@raphatherapies.org" class="text-gray-500 hover:text-primary transition-colors">
+                <i class="fas fa-envelope text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+               alt="Michael Chen, OTR/L - Occupational Therapist" 
+               class="w-full h-64 object-cover object-center">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary mb-1">Michael Chen, OTR/L</h3>
+            <p class="text-accent mb-3">Occupational Therapist</p>
+            <p class="text-gray-700 mb-4">Michael brings over 10 years of experience helping clients develop functional skills for independence in daily activities.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-gray-500 hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin text-lg"></i>
+              </a>
+              <a href="mailto:michael@raphatherapies.org" class="text-gray-500 hover:text-primary transition-colors">
+                <i class="fas fa-envelope text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+               alt="Jennifer Martinez, M.Ed - Educational Advocate & Consultant" 
+               class="w-full h-64 object-cover object-center">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary mb-1">Jennifer Martinez, M.Ed</h3>
+            <p class="text-accent mb-3">Educational Advocate & Consultant</p>
+            <p class="text-gray-700 mb-4">Jennifer is passionate about helping families navigate educational systems and secure appropriate services for students.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-gray-500 hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin text-lg"></i>
+              </a>
+              <a href="mailto:jennifer@raphatherapies.org" class="text-gray-500 hover:text-primary transition-colors">
+                <i class="fas fa-envelope text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <a href="contact.html" class="bg-primary hover:bg-primary-light text-white font-medium px-6 py-3 rounded-md transition duration-300 inline-block">
+          Join Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-primary mb-4">Client Success Stories</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          Hear from individuals who have experienced positive change through our services.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-gray-100 p-8 rounded-lg shadow-sm border-l-4 border-accent">
+          <div class="flex items-center mb-4">
+            <div class="text-accent">
+              <i class="fas fa-quote-left text-2xl"></i>
+            </div>
+          </div>
+          <blockquote class="text-gray-700 italic mb-6">
+            "Working with RAPHA Therapies has been transformative for our family. The educational advocacy services helped us secure the right support for our child at school, and the difference in her confidence and academic progress has been remarkable."
+          </blockquote>
+          <div class="flex items-center">
+            <div class="mr-4">
+              <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-semibold">
+                RP
+              </div>
+            </div>
+            <div>
+              <p class="font-medium">Rachel P.</p>
+              <p class="text-sm text-gray-700">Parent of Educational Advocacy Client</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-gray-100 p-8 rounded-lg shadow-sm border-l-4 border-accent">
+          <div class="flex items-center mb-4">
+            <div class="text-accent">
+              <i class="fas fa-quote-left text-2xl"></i>
+            </div>
+          </div>
+          <blockquote class="text-gray-700 italic mb-6">
+            "The life coaching sessions at RAPHA have given me tools to navigate a major career transition with confidence. My coach listened deeply to my concerns and helped me develop practical strategies aligned with my values and goals."
+          </blockquote>
+          <div class="flex items-center">
+            <div class="mr-4">
+              <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-semibold">
+                JT
+              </div>
+            </div>
+            <div>
+              <p class="font-medium">James T.</p>
+              <p class="text-sm text-gray-700">Life Coaching Client</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-primary mb-4">Frequently Asked Questions</h2>
+        <p class="text-gray-700 max-w-3xl mx-auto">
+          Find answers to common questions about our services and approach.
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-6">
+          <!-- FAQ Item 1 -->
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none faq-button">
+              <h3 class="text-lg font-medium text-primary">How do I know which service is right for me or my family member?</h3>
+              <i class="fas fa-chevron-down text-accent transition-transform duration-300 faq-icon"></i>
+            </button>
+            <div class="px-6 pb-6 hidden faq-answer">
+              <p class="text-gray-700">We offer complimentary initial consultations to help determine which services would best meet your needs. During this session, we'll discuss your concerns, goals, and circumstances to develop a personalized recommendation. Our interdisciplinary approach allows us to provide comprehensive support or connect you with the most appropriate specialist.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none faq-button">
+              <h3 class="text-lg font-medium text-primary">What is the typical process for beginning services?</h3>
+              <i class="fas fa-chevron-down text-accent transition-transform duration-300 faq-icon"></i>
+            </button>
+            <div class="px-6 pb-6 hidden faq-answer">
+              <p class="text-gray-700">The process begins with an initial consultation, followed by an assessment to understand your specific needs. We then develop a personalized plan and schedule regular sessions based on your goals and availability. Our team provides ongoing support and adjusts the approach as needed to ensure you're making progress toward your objectives.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none faq-button">
+              <h3 class="text-lg font-medium text-primary">Do you accept insurance for your services?</h3>
+              <i class="fas fa-chevron-down text-accent transition-transform duration-300 faq-icon"></i>
+            </button>
+            <div class="px-6 pb-6 hidden faq-answer">
+              <p class="text-gray-700">Insurance coverage varies depending on the service. Some of our therapeutic services may be covered by certain insurance plans, while others are typically self-pay. During your initial consultation, we'll discuss payment options and provide information about potential insurance coverage, sliding scale fees, and other financial arrangements to make our services accessible.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden faq-item">
+            <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none faq-button">
+              <h3 class="text-lg font-medium text-primary">Can services be provided virtually or only in-person?</h3>
+              <i class="fas fa-chevron-down text-accent transition-transform duration-300 faq-icon"></i>
+            </button>
+            <div class="px-6 pb-6 hidden faq-answer">
+              <p class="text-gray-700">We offer both in-person and virtual options for many of our services. Our telehealth platform allows us to provide secure, effective support regardless of your location. Some specialized services may require in-person sessions, while others can be fully delivered through virtual means. We'll discuss the best format for your specific needs during your consultation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-16 bg-primary text-white text-center">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">Ready to Start Your Journey with RAPHA Therapies?</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Contact us today to schedule a consultation and learn how our services can support your goals for growth and wellbeing.
+      </p>
+      <a href="contact.html" class="bg-white text-primary hover:bg-opacity-90 font-medium px-8 py-4 rounded-md transition duration-300 inline-block">
+        Get Started Today
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">RAPHA Therapies</h3>
+          <p class="mb-4 text-white/80">
+            Empowering growth through holistic support for personal, emotional, and
+            educational development.
+          </p>
+          <p class="text-white/80">
+            <a href="mailto:info@raphatherapies.org" class="hover:text-white transition-colors">
+              info@raphatherapies.org
+            </a>
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#home" class="text-white/80 hover:text-white transition-colors">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="text-white/80 hover:text-white transition-colors">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="text-white/80 hover:text-white transition-colors">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#team" class="text-white/80 hover:text-white transition-colors">
+                Our Team
+              </a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-white/80 hover:text-white transition-colors">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium mb-4">Our Services</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#life-coaching" class="text-white/80 hover:text-white transition-colors">
+                Life Coaching
+              </a>
+            </li>
+            <li>
+              <a href="#occupational-therapy" class="text-white/80 hover:text-white transition-colors">
+                Occupational Therapy
+              </a>
+            </li>
+            <li>
+              <a href="#educational-advocacy" class="text-white/80 hover:text-white transition-colors">
+                Educational Advocacy
+              </a>
+            </li>
+            <li>
+              <a href="#social-work" class="text-white/80 hover:text-white transition-colors">
+                Social Work Consulting
+              </a>
+            </li>
+            <li>
+              <a href="#sel" class="text-white/80 hover:text-white transition-colors">
+                Social Emotional Learning
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-medium mb-4">
+            Subscribe to Our Newsletter
+          </h3>
+          <p class="mb-4 text-white/80">
+            Stay updated with our latest resources and services.
+          </p>
+          <form action="newsletter-handler.php" method="POST" class="flex">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your email address"
+              class="px-4 py-2 rounded-l-md focus:outline-none text-gray-900 w-full"
+              required
+            />
+            <button
+              type="submit"
+              class="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-r-md transition duration-300"
+            >
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <hr class="border-white/20 my-8" />
+
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-white/80 text-sm mb-4 md:mb-0">
+          &copy; 2025 RAPHA Therapies. All rights reserved.
+        </p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-white/80 hover:text-white transition-colors">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="text-white/80 hover:text-white transition-colors">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Mobile Services Dropdown Toggle
+    document.getElementById('services-dropdown-button').addEventListener('click', function() {
+      const dropdownMenu = document.getElementById('services-dropdown-menu');
+      const dropdownIcon = document.getElementById('services-dropdown-icon');
+      dropdownMenu.classList.toggle('hidden');
+      dropdownIcon.classList.toggle('rotate-180');
+    });
+
+    // FAQ Toggles
+    const faqButtons = document.querySelectorAll('.faq-button');
+    
+    faqButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const faqItem = this.closest('.faq-item');
+        const answer = faqItem.querySelector('.faq-answer');
+        const icon = faqItem.querySelector('.faq-icon');
+        
+        // Toggle the current FAQ
+        answer.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+        
+        // Optional: Close other FAQs when opening this one
+        /*
+        document.querySelectorAll('.faq-item').forEach(item => {
+          if (item !== faqItem) {
+            item.querySelector('.faq-answer').classList.add('hidden');
+            item.querySelector('.faq-icon').classList.remove('rotate-180');
+          }
+        });
+        */
+      });
+    });
+
+    // Check URL parameters for newsletter signup success
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('newsletter') === 'success') {
+        alert("Thank you for subscribing to our newsletter!");
+      }
+    });
+  </script>
+</body>
+</html>
